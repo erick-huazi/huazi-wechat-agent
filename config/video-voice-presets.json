@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-video-voice-v1",
+  "provider": "edge-tts",
+  "language": "zh-CN",
+  "default_preset": "huazi-president",
+  "presets": {
+    "huazi-president": {
+      "voice_id": "zh-CN-YunyangNeural",
+      "display_name": "云扬｜社长默认",
+      "gender": "male",
+      "tone": "professional_reliable",
+      "rate": "+5%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "use_when": "AI 新闻、商业判断、产品更新和默认内容"
+    },
+    "huazi-breakout": {
+      "voice_id": "zh-CN-YunjianNeural",
+      "display_name": "云健｜强观点",
+      "gender": "male",
+      "tone": "passionate_decisive",
+      "rate": "+8%",
+      "pitch": "-1Hz",
+      "volume": "+0%",
+      "use_when": "强冲突、强判断和极值增长实验"
+    },
+    "huazi-explainer": {
+      "voice_id": "zh-CN-YunxiNeural",
+      "display_name": "云希｜轻松科普",
+      "gender": "male",
+      "tone": "lively_sunshine",
+      "rate": "+3%",
+      "pitch": "+0Hz",
+      "volume": "+0%",
+      "use_when": "教程、清单、轻松科普和工具拆解"
+    }
+  },
+  "selection_rules": [
+    "显式 voice_preset 优先",
+    "未显式选择时固定使用 huazi-president",
+    "只有强观点内容才切换 huazi-breakout",
+    "只有教程或轻松科普内容才切换 huazi-explainer",
+    "不得在三个预设之外临时更换音色"
+  ],
+  "mix": {
+    "background_music": "none_by_default",
+    "sound_effects": "minimal_functional_only",
+    "voice_priority": "narration_first"
+  }
+}

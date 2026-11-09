@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-editorial-design-v1",
+  "label_review_threshold": 36,
+  "paragraph_review_threshold": 180,
+  "shared_constraints": [
+    "Use the supplied character reference for identity and drawing medium only; do not copy its scene, text or composition.",
+    "One visual message per frame. Keep a clear primary subject, generous whitespace and readable hierarchy at phone size.",
+    "Use only the exact author-specified labels, subject to independent fact verification. This compiler has not approved them. Do not add numbers, logos, watermarks, engagement requests or fabricated product interfaces.",
+    "An analogy is an illustration, not a measured result. Do not imply verified speed, causation or superiority with invented charts.",
+    "Keep the series character and palette consistent while changing the composition to explain each distinct message."
+  ],
+  "roles": {
+    "cover": {"structure_hint": "A single recognizable subject in a wide scene", "reader_question": "What changed, and why might this matter to me?"},
+    "news_fact": {"structure_hint": "An annotated object or source-backed change; compare only when both states are verified", "reader_question": "What did the source actually announce?"},
+    "mechanism": {"structure_hint": "A sequence or relationship diagram supported by the explanation", "reader_question": "How does the central idea work?"},
+    "scenario": {"structure_hint": "One concrete use scene with visible input, action and output", "reader_question": "Where would I use this, and what should I inspect?"},
+    "action_boundary": {"structure_hint": "A short checklist or decision path with an explicit limitation", "reader_question": "What can I do next, and when should I not use it?"}
+  },
+  "platforms": {
+    "wechat": {"file": "wechat-article.md", "intent": "Explain the verified news, one reusable principle, one labeled example and a complete next action.", "format": "Short sections with useful headings; weave all five images between explanatory paragraphs."},
+    "toutiao": {"file": "toutiao-article.md", "intent": "Lead with the dated new event; distinguish the announcement from its practical implications and uncertainty.", "format": "News-first opening, concrete subheads, five images interleaved in order."},
+    "zhihu": {"file": "zhihu-article.md", "intent": "Answer a real question with a decision framework, counterargument and explicit factual boundary.", "format": "Question, short answer, evidence, mechanism, countercase and decision; five images in order."},
+    "xiaohongshu": {"file": "xiaohongshu.md", "intent": "Deliver a self-contained practical checklist, not a teaser or an interaction-for-resources offer.", "format": "Brief news context plus scannable steps; ordered five-image gallery, no demand for engagement."},
+    "weibo": {"file": "weibo-article.md", "intent": "Keep one clear news judgment with source, explanation, use case and limits; short-copy backup is not a separate posting action.", "format": "Compact long article with five interleaved images; prepare weibo.md separately without sending it."}
+  },
+  "editing_invariants": [
+    "Preserve numbers, units, denominators, model versions, conditions, scope, meaningful qualifiers, citations and AI disclosure.",
+    "Separate verified fact, interpretation, hypothetical example and recommendation. Do not invent first-person testing or audience metrics.",
+    "Keep the growth experiment to its existing single variable; platform format constraints do not justify additional experimental changes.",
+    "Remove filler and duplicated conclusions only after identifying what each paragraph contributes. Do not optimize for AI-detector evasion."
+  ]
+}

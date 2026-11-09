@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-content-quality-v1",
+  "effective_from": "2026-08-22",
+  "minimum_pack_score": 85,
+  "editorial_upgrade": {
+    "effective_from": "2026-10-05",
+    "policy_id": "huazi-editorial-v2",
+    "minimum_repeat_length": 30,
+    "near_repeat_similarity": 0.94,
+    "opening_tension_is_advisory": true,
+    "news_opening": "前120字交代可核验的新变化与读者关系；不强迫使用反差或恐吓句式",
+    "fact_preservation": "编辑不得改变数字、分母、模型版本、实验条件、限定语和引用，也不得编造亲历"
+  },
+  "principles": [
+    "前120字写清已核验的新变化及读者关系，事实切入也成立，不强造反差或焦虑",
+    "一篇只保留一个核心判断和一个可辨识的绝活",
+    "具体场景必须早于抽象方法论",
+    "结尾直接交付一个无需互动即可执行的动作",
+    "各平台按阅读场景重写，不做同文机械缩写"
+  ],
+  "soft_openers": [
+    "很多人看到这里",
+    "我更愿意把它看成",
+    "最近很火",
+    "今天聊聊",
+    "相信大家"
+  ],
+  "hook_patterns": [
+    "不是",
+    "而是",
+    "不等于",
+    "别",
+    "先",
+    "真正",
+    "最怕",
+    "却",
+    "卡在",
+    "问题"
+  ],
+  "scenario_patterns": [
+    "比如",
+    "例如",
+    "当你",
+    "每天",
+    "团队",
+    "公司",
+    "后台",
+    "流程",
+    "场景"
+  ],
+  "risk_patterns": [
+    "风险",
+    "边界",
+    "权限",
+    "确认",
+    "复核",
+    "停止条件",
+    "不能",
+    "不要"
+  ],
+  "action_patterns": [
+    "今天先",
+    "现在先",
+    "先选",
+    "先把",
+    "检查",
+    "写下",
+    "画出",
+    "列出"
+  ],
+  "platforms": {
+    "wechat": {
+      "file": "wechat-article.md",
+      "title_min": 14,
+      "title_max": 28,
+      "body_min": 1500,
+      "body_max": 3800,
+      "min_headings": 4,
+      "min_list_items": 3,
+      "required_images": 5,
+      "max_paragraph": 320
+    },
+    "toutiao": {
+      "file": "toutiao-article.md",
+      "title_min": 12,
+      "title_max": 30,
+      "body_min": 420,
+      "body_max": 1800,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 300
+    },
+    "zhihu": {
+      "file": "zhihu-article.md",
+      "title_min": 12,
+      "title_max": 32,
+      "body_min": 520,
+      "body_max": 2400,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 320
+    },
+    "xiaohongshu": {
+      "file": "xiaohongshu.md",
+      "title_min": 8,
+      "title_max": 24,
+      "body_min": 220,
+      "body_max": 900,
+      "min_headings": 0,
+      "min_list_items": 3,
+      "required_images": 0,
+      "max_paragraph": 220
+    },
+    "weibo_article": {
+      "file": "weibo-article.md",
+      "title_min": 12,
+      "title_max": 32,
+      "body_min": 520,
+      "body_max": 2200,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 320
+    },
+    "weibo": {
+      "file": "weibo.md",
+      "title_min": 0,
+      "title_max": 0,
+      "body_min": 70,
+      "body_max": 360,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 360
+    },
+    "douyin_video": {
+      "file": "douyin-video.md",
+      "title_min": 8,
+      "title_max": 24,
+      "body_min": 45,
+      "body_max": 300,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 300
+    },
+    "video_channel": {
+      "file": "video-channel.md",
+      "title_min": 8,
+      "title_max": 24,
+      "body_min": 35,
+      "body_max": 300,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 300
+    },
+    "kuaishou_video": {
+      "file": "kuaishou-video.md",
+      "title_min": 8,
+      "title_max": 24,
+      "body_min": 35,
+      "body_max": 300,
+      "min_headings": 0,
+      "min_list_items": 0,
+      "required_images": 0,
+      "max_paragraph": 300
+    }
+  },
+  "video_script": {
+    "file": "visual-video-pack.md",
+    "narration_min": 180,
+    "narration_max": 460,
+    "first_sentence_max": 28,
+    "min_scenes": 5,
+    "max_scenes": 10
+  }
+}

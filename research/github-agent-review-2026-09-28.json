@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-28",
+  "timezone": "Asia/Shanghai",
+  "scope": "Draft-only distribution reliability; scores are local engineering judgments, not benchmark results or popularity rankings.",
+  "weights": {"project_fit": 25, "incremental_value": 20, "china_platform_fit": 15, "deterministic_safety": 15, "maintenance_and_license": 15, "integration_cost": 10},
+  "metadata_method": "Unauthenticated GitHub repository and latest-default-branch-commit API; branch commits are not release versions. No unreviewed installer was executed.",
+  "candidates": [
+    {
+      "repository": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "commit": "07b33185eab893be2ed031eedae52f09314bf77c",
+      "committed_at": "2026-09-27T21:34:53Z",
+      "license": "MIT",
+      "scores": [24, 19, 12, 15, 14, 7], "total": 91,
+      "decision": "adopt_patterns",
+      "reason": "Persistent step state and separation of external side effects directly address duplicate draft creation after interruption. A full framework migration would add unnecessary dependencies.",
+      "source": "https://github.com/langchain-ai/langgraph/blob/07b33185eab893be2ed031eedae52f09314bf77c/README.md",
+      "local_integration": ["scripts/social_draft_router.py", "scripts/social_auto_upload_adapter.py", "tests/test_draft_resume.py"]
+    },
+    {
+      "repository": "langchain-ai/langchain-skills",
+      "url": "https://github.com/langchain-ai/langchain-skills",
+      "commit": "a76fef33ed87f23a1508a5d4f119996dfe0cd2b0",
+      "committed_at": "2026-09-25T15:44:53Z",
+      "license": "MIT",
+      "scores": [24, 18, 11, 15, 13, 9], "total": 90,
+      "decision": "adapt_to_project_skill",
+      "reason": "HITL skill explicitly warns that interrupted nodes may replay side effects. Local policy now distinguishes verify-existing from retry and requests a scoped human action for blockers.",
+      "source": "https://github.com/langchain-ai/langchain-skills/blob/a76fef33ed87f23a1508a5d4f119996dfe0cd2b0/config/skills/langgraph-human-in-the-loop/SKILL.md",
+      "local_integration": ["docs/draft-resume.md", "AGENTS.md", "huazi-draft-resume personal skill"]
+    },
+    {
+      "repository": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+      "commit": "33375500bcea98d610eb30ce10ac4e59b89c390d",
+      "committed_at": "2026-09-24T16:20:35Z",
+      "license": "Apache-2.0 for webapp-testing only; repository API license is null",
+      "scores": [21, 17, 10, 14, 13, 9], "total": 84,
+      "decision": "reference_only",
+      "reason": "Useful inspection-before-action guidance; local web-app testing does not provide authenticated Chinese-platform adapters. Existing supported browser tooling remains in use.",
+      "source": "https://github.com/anthropics/skills/blob/33375500bcea98d610eb30ce10ac4e59b89c390d/skills/webapp-testing/SKILL.md"
+    },
+    {
+      "repository": "duanyytop/agents-radar",
+      "url": "https://github.com/duanyytop/agents-radar",
+      "commit": "efd95364047b3a51e4922e17b271da3e451d7c8e",
+      "committed_at": "2026-09-28T01:18:43Z",
+      "license": "MIT",
+      "scores": [22, 11, 12, 14, 14, 9], "total": 82,
+      "decision": "retain_existing_patterns",
+      "reason": "Fresh multi-source AI signals remain useful, but local ranking already adopted this method in August. Generated digests are leads, not factual verification. Latest commits may be generated reports, not code improvements.",
+      "source": "https://github.com/duanyytop/agents-radar/blob/efd95364047b3a51e4922e17b271da3e451d7c8e/README.md"
+    },
+    {
+      "repository": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "commit": "4cbe921673b48a488f5415d9159249afd12a625b",
+      "committed_at": "2026-09-26T07:29:32Z",
+      "license": "MIT",
+      "scores": [21, 15, 11, 10, 13, 6], "total": 76,
+      "decision": "defer_runtime",
+      "reason": "Active browser agent project, but replacing the existing controlled logged-in surface adds integration work and does not guarantee draft-only actions or retention verification.",
+      "source": "https://github.com/browser-use/browser-use/blob/4cbe921673b48a488f5415d9159249afd12a625b/README.md"
+    },
+    {
+      "repository": "wechatsync/Wechatsync",
+      "url": "https://github.com/wechatsync/Wechatsync/tree/v2",
+      "commit": "a98e42865387285afcc027c61836488748f3b30f",
+      "committed_at": "2026-05-27T05:33:56Z",
+      "license": "GPL-3.0 per GitHub repository metadata",
+      "scores": [23, 12, 15, 8, 8, 7], "total": 73,
+      "decision": "retain_optional_bridge_no_upgrade",
+      "reason": "Strong domestic article coverage, but existing bridge already exists; extension connectivity and per-platform draft semantics remain gating requirements. Not a recently updated September candidate.",
+      "source": "https://github.com/wechatsync/Wechatsync/blob/a98e42865387285afcc027c61836488748f3b30f/README.md"
+    }
+  ],
+  "copy_policy": "Original local implementations of architectural ideas. No upstream runtime, source code or entire third-party skill copied or installed.",
+  "limits": ["No live platform write performed by this optimization", "Local checkpoints are not remote exactly-once transactions", "Browser recovery still requires fresh UI observation and the result recorder", "No cookies, credentials, cloud traces or private browser state collected"]
+}

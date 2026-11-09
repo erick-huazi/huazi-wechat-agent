@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Huazi five-platform graphic content and image-authoring improvement",
+  "rubric": {
+    "task_fit": 30,
+    "factual_safety": 25,
+    "integration_fit": 20,
+    "maintenance": 10,
+    "license_clarity": 10,
+    "operating_cost": 5
+  },
+  "scoring_method": "Maintainer judgement for adopting a bounded method into this project, not a benchmark of upstream quality. Totals are sums of dimension scores. No stars, simulated traffic or unrun performance claims are used.",
+  "freshness_note": "Current default-branch commits were checked via public GitHub repository and branch endpoints. Recent commit dates are not feature-release dates. Baoyu and Humanizer remain at previously reviewed pins; this is deeper integration, not a new-release claim.",
+  "candidates": [
+    {
+      "repository": "textlint/textlint",
+      "commit": "805e0e58b1a73c93bbbb14702533989b83891502",
+      "commit_at": "2026-10-08T18:45:17Z",
+      "license": "MIT",
+      "archived": false,
+      "default_branch": "master",
+      "metadata_sources": [
+        "https://api.github.com/repos/textlint/textlint",
+        "https://api.github.com/repos/textlint/textlint/branches/master"
+      ],
+      "inspected_file": {
+        "url": "https://github.com/textlint/textlint/blob/805e0e58b1a73c93bbbb14702533989b83891502/docs/rule.md",
+        "blob_sha": "8a6c1aa62bf638167d79d10caaabe6d13a759d7c",
+        "scope": "Selected relevant sections; not a full repository security audit"
+      },
+      "score": {
+        "task_fit": 27,
+        "factual_safety": 25,
+        "integration_fit": 18,
+        "maintenance": 10,
+        "license_clarity": 10,
+        "operating_cost": 5
+      },
+      "total": 95,
+      "decision": "method_integrated",
+      "rationale": "AST-aware, line-located, non-mutating advice maps closely to the existing MarkdownIt compiler; Python integration is original, not a textlint plugin.",
+      "implemented": [
+        "scoped prose traversal",
+        "source block locations",
+        "advisory findings"
+      ],
+      "excluded": [
+        "JavaScript runtime and third-party rules"
+      ]
+    },
+    {
+      "repository": "JimLiu/baoyu-skills",
+      "commit": "1567581c26ec29f4216c6e6835415bf30343b0e3",
+      "commit_at": "2026-09-10T15:13:43Z",
+      "license": "MIT",
+      "archived": false,
+      "default_branch": "main",
+      "metadata_sources": [
+        "https://api.github.com/repos/JimLiu/baoyu-skills",
+        "https://api.github.com/repos/JimLiu/baoyu-skills/branches/main"
+      ],
+      "inspected_file": {
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/1567581c26ec29f4216c6e6835415bf30343b0e3/skills/baoyu-article-illustrator/SKILL.md",
+        "blob_sha": "87e27e6d83f420605de2f6992454d71874d8dc44",
+        "scope": "Selected relevant sections; not a full repository security audit"
+      },
+      "score": {
+        "task_fit": 30,
+        "factual_safety": 21,
+        "integration_fit": 19,
+        "maintenance": 8,
+        "license_clarity": 10,
+        "operating_cost": 5
+      },
+      "total": 93,
+      "decision": "method_deepened",
+      "rationale": "Best five-image authoring fit: distinguish visual information structure from identity/style/palette; retain fixed local image policy and independent fact review.",
+      "implemented": [
+        "author-specified visual explanation in prompts",
+        "five-role visual review queue"
+      ],
+      "excluded": [
+        "upstream tool routing",
+        "variable image counts",
+        "automatic labels or fact inference"
+      ]
+    },
+    {
+      "repository": "blader/humanizer",
+      "commit": "225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8",
+      "commit_at": "2026-09-28T05:54:38Z",
+      "license": "MIT",
+      "archived": false,
+      "default_branch": "main",
+      "metadata_sources": [
+        "https://api.github.com/repos/blader/humanizer",
+        "https://api.github.com/repos/blader/humanizer/branches/main"
+      ],
+      "inspected_file": {
+        "url": "https://github.com/blader/humanizer/blob/225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8/SKILL.md",
+        "blob_sha": "19fc634208e8cc6ae55d4ff287152583216fd244",
+        "scope": "Selected relevant sections; not a full repository security audit"
+      },
+      "score": {
+        "task_fit": 26,
+        "factual_safety": 22,
+        "integration_fit": 19,
+        "maintenance": 8,
+        "license_clarity": 10,
+        "operating_cost": 5
+      },
+      "total": 90,
+      "decision": "method_deepened",
+      "rationale": "Useful for repetitive staging and preserving facts, but broad rewriting or context-free Chinese detection would introduce risk.",
+      "implemented": [
+        "staged-opening advice",
+        "repeated-contrast review only after three paragraphs",
+        "no automatic rewriting"
+      ],
+      "excluded": [
+        "AI-detector evasion",
+        "automatic deletion of negation, uncertainty or disclosures"
+      ]
+    },
+    {
+      "repository": "vale-cli/vale",
+      "commit": "cfb21a4ce87238bcfb44b90e8e0db9e0e91d6c09",
+      "commit_at": "2026-10-03T23:20:06Z",
+      "license": "MIT",
+      "archived": false,
+      "default_branch": "v3",
+      "metadata_sources": [
+        "https://api.github.com/repos/vale-cli/vale",
+        "https://api.github.com/repos/vale-cli/vale/branches/v3"
+      ],
+      "inspected_file": {
+        "url": "https://github.com/vale-cli/vale/blob/cfb21a4ce87238bcfb44b90e8e0db9e0e91d6c09/README.md",
+        "blob_sha": "c65496a649fa9d3abc165b865805c3d5d173829a",
+        "scope": "Selected relevant sections; not a full repository security audit"
+      },
+      "score": {
+        "task_fit": 25,
+        "factual_safety": 24,
+        "integration_fit": 16,
+        "maintenance": 9,
+        "license_clarity": 10,
+        "operating_cost": 4
+      },
+      "total": 88,
+      "decision": "method_integrated",
+      "rationale": "Scoped offline style advice fits; existing parser makes an additional Go runtime and English rule packs unnecessary.",
+      "implemented": [
+        "local editorial rules",
+        "advisory severity separated from approval"
+      ],
+      "excluded": [
+        "binary installation",
+        "English spelling/style rules"
+      ]
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "f99f6aa910a442b0197b768ce0ea7751e35e2060",
+      "commit_at": "2026-10-07T16:45:46Z",
+      "license": "MIT",
+      "archived": false,
+      "default_branch": "main",
+      "metadata_sources": [
+        "https://api.github.com/repos/msitarzewski/agency-agents",
+        "https://api.github.com/repos/msitarzewski/agency-agents/branches/main"
+      ],
+      "inspected_file": {
+        "url": "https://github.com/msitarzewski/agency-agents/blob/f99f6aa910a442b0197b768ce0ea7751e35e2060/design/design-visual-storyteller.md",
+        "blob_sha": "e48fde299d7e7ecc259e05819be64212dcf2bc25",
+        "scope": "Selected relevant sections; not a full repository security audit"
+      },
+      "score": {
+        "task_fit": 26,
+        "factual_safety": 18,
+        "integration_fit": 17,
+        "maintenance": 9,
+        "license_clarity": 10,
+        "operating_cost": 5
+      },
+      "total": 85,
+      "decision": "method_deepened",
+      "rationale": "Visual narrative and hierarchy fit the five roles; marketing-style success metrics and role-play experience are not evidence.",
+      "implemented": [
+        "role-based visual questions",
+        "explicit misleading-implication review"
+      ],
+      "excluded": [
+        "engagement improvement claims",
+        "fictional professional experience",
+        "video and orchestrator workflows"
+      ]
+    },
+    {
+      "repository": "richtabor/agent-skills",
+      "commit": "89eb2e97fdde10396972ad38200a57afffd11226",
+      "commit_at": "2026-04-06T01:38:37Z",
+      "license": null,
+      "archived": false,
+      "default_branch": "main",
+      "metadata_sources": [
+        "https://api.github.com/repos/richtabor/agent-skills",
+        "https://api.github.com/repos/richtabor/agent-skills/branches/main"
+      ],
+      "inspected_file": {
+        "url": "https://github.com/richtabor/agent-skills/blob/89eb2e97fdde10396972ad38200a57afffd11226/skills/red-pen/SKILL.md",
+        "blob_sha": "6f94d8ca4bf5f76bd1de6f0385dd06151b74f584",
+        "scope": "Selected relevant sections; not a full repository security audit"
+      },
+      "score": {
+        "task_fit": 22,
+        "factual_safety": 20,
+        "integration_fit": 16,
+        "maintenance": 5,
+        "license_clarity": 0,
+        "operating_cost": 5
+      },
+      "total": 68,
+      "decision": "not_selected_license_unverified",
+      "rationale": "Reviewer concept is relevant, but repository license was not confirmed and strict English rhetoric/typography rules are too broad for Chinese reporting.",
+      "implemented": [],
+      "excluded": [
+        "copying or installing the skill",
+        "blanket punctuation or contrast bans"
+      ]
+    }
+  ],
+  "local_implementation": {
+    "new_dependencies": [],
+    "installed_upstream_agents": [],
+    "files": [
+      "scripts/editorial_advisor.py",
+      "scripts/content_visual_brief.py",
+      "scripts/image_quality_gate.py",
+      "scripts/huazi_content_ops.py",
+      "docs/editorial-design-playbook.md",
+      "docs/content-visual-quality.md"
+    ],
+    "source_copying": "No upstream code or complete skill copied; local original implementation using existing MarkdownIt.",
+    "runtime_changes": "Advisory authoring only. New storyboard skeleton leaves optional visual-intent fields empty. No automatic text rewrite, image generation, approval, scoring or platform writes.",
+    "current_pack_policy": "Read-only demonstration only; do not migrate existing packages or alter saved drafts/evidence.",
+    "authority": "Suggestions and author intention are not factual verification, visual review or saved-draft evidence.",
+    "verification_report": "research/editorial-advisor-validation-2026-10-09.json"
+  }
+}

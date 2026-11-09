@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "strategy_id": "huazi-survival-extreme-v1",
+  "internal_name": "黄毛思维",
+  "public_name": "启动期极值增长模式",
+  "active_mode": "survival",
+  "objective": "在事实、合规和账号安全硬边界内，优先捕捉高热度 AI 新闻，再用可复用知识框架提高内容击穿算法和形成有效流量样本的概率。",
+  "hotspot_window_hours": 48,
+  "editorial_mode": {
+    "strategy_id": "ai-news-plus-knowledge-v1",
+    "news_first": true,
+    "news_candidate_ratio": 0.6,
+    "content_formula": "一手新闻事实 + 热度信号 + 普通人影响 + 可复用知识模型 + 当天行动",
+    "cold_project_rule": "冷门 GitHub 项目不得仅凭技术新奇度胜出；除非出现独立热度信号或能解释正在发生的 AI 新闻。",
+    "headline_rule": "标题先写新闻变化与读者损益，仓库名、版本号和技术名词放到副标题或正文。"
+  },
+  "hard_boundaries": {
+    "facts_must_be_verifiable": true,
+    "platform_compliance_cannot_be_traded_for_reach": true,
+    "no_engagement_exchange": true,
+    "no_fabricated_conflict_or_result": true,
+    "draft_only_distribution": true
+  },
+  "experiment": {
+    "required": true,
+    "exactly_one_variable": true,
+    "allowed_variables": [
+      "opening_hook",
+      "emotion_tension",
+      "format",
+      "point_of_view",
+      "information_density"
+    ],
+    "required_fields": [
+      "variable",
+      "hypothesis",
+      "control",
+      "signature_move",
+      "breakout_reason",
+      "audience_signal",
+      "kill_condition"
+    ]
+  },
+  "extreme_value": {
+    "tie_break_dimensions": [
+      "breakout_potential",
+      "signature_move_strength",
+      "hot_window"
+    ],
+    "breakout_multiple_threshold": 3.0,
+    "minimum_complete_retros_for_transition_review": 20,
+    "minimum_breakout_wins_for_transition_review": 3,
+    "minimum_repeatable_series_for_transition_review": 2,
+    "transition_is_manual": true
+  },
+  "mindset": {
+    "audience_role": "测试员，不是人格评委",
+    "desire_rule": "允许想赢、想赚钱和不甘心存在，但只能转化为更快实验和更好交付。",
+    "stage_rule": "启动期追求勇猛和存活；达到复盘条件后人工评估是否转入长期品牌模式。"
+  }
+}

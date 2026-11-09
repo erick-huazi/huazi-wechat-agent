@@ -1,0 +1,3 @@
+# Optional for importing HTML. Snapshot validation and verbatim text import use stdlib only.
+# Inspected upstream commit: 6c1977a00b4e82ebb7e6fad1192467adaf24d430 (Apache-2.0).
+trafilatura==2.3.0

@@ -1,0 +1,71 @@
+{
+  "schema_version": 3,
+  "rubric_id": "huazi-topic-100-v5-signal-consensus",
+  "growth_strategy_id": "huazi-survival-extreme-v1",
+  "minimum_candidate_count": 5,
+  "maximum_candidate_count": 10,
+  "integrity_required_from": "2026-10-07",
+  "freshness_window_hours": 48,
+  "minimum_score": 85,
+  "dimensions": {
+    "ordinary_person_value": 15,
+    "hot_window": 20,
+    "breakout_potential": 15,
+    "signature_move_strength": 10,
+    "information_gain": 10,
+    "fact_credibility": 15,
+    "persona_fit": 5,
+    "platform_distribution": 5,
+    "risk_control": 5
+  },
+  "news_priority": {
+    "enabled": true,
+    "minimum_candidate_count": 3,
+    "minimum_candidate_ratio": 0.6,
+    "minimum_heat_signal_count": 2,
+    "minimum_heat_signal_kinds": 2,
+    "minimum_independent_domains": 2,
+    "preferred_topic_types": [
+      "ai_model_release",
+      "agent_product_update",
+      "ai_product_launch",
+      "ai_research_release",
+      "ai_policy_event",
+      "ai_funding_event",
+      "ai_incident",
+      "open_source_release"
+    ],
+    "allowed_heat_signal_kinds": [
+      "official_release",
+      "research_release",
+      "github_trending",
+      "search_trend",
+      "community_discussion",
+      "trusted_media",
+      "product_status"
+    ],
+    "required_external_signal_kinds": [
+      "github_trending",
+      "search_trend",
+      "community_discussion",
+      "trusted_media",
+      "product_status"
+    ]
+  },
+  "knowledge_layer": {
+    "required": true,
+    "required_fields": [
+      "why_it_matters",
+      "mental_model",
+      "reader_action",
+      "fact_boundary"
+    ]
+  },
+  "hard_requirements": {
+    "official_or_primary_source": true,
+    "source_url": true,
+    "published_at": true,
+    "deduplicate_within_days": 7,
+    "single_variable_experiment": true
+  }
+}

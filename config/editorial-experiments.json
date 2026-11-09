@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-question-led-opening-pilot-v1",
+  "authority": "authoring_advice_only",
+  "variable": "opening_hook",
+  "tactics": {
+    "reader_problem": {"label": "Reader problem", "prompt": "Lead with one concrete reader task affected by the verified update; answer that question in the article."},
+    "decision_cost": {"label": "Decision tradeoff", "prompt": "Lead with what a reader needs to decide before adopting the update; never invent savings, prices or urgency."},
+    "evidence_boundary": {"label": "Evidence boundary", "prompt": "Lead with what the evidence does and does not establish. Do not invent a widespread misconception or attack a straw man."},
+    "scenario_question": {"label": "Scenario question", "prompt": "Open with a clearly hypothetical work situation, then connect it to the verified update. Do not claim personal testing."},
+    "mechanism_question": {"label": "Mechanism question", "prompt": "Lead with the practical why or how question behind the news; deliver the answer, not an unanswered curiosity gap."}
+  },
+  "fixed_dimensions": ["title", "verified claims and qualifications", "body after opening", "point of view", "emotional intensity", "information density", "five images and cover", "layout", "audience", "distribution conditions"],
+  "visual_direction": {
+    "shared": [
+      "Professional editorial illustration: crisp contours, restrained texture, deliberate light and shadow, one dominant focal object. Avoid a generic mascot-and-cards poster.",
+      "Keep Huazi's approved identity and series palette. The character guides attention but must not obscure the actual subject. Use icons only to explain a specific object or relationship.",
+      "Design for phone reading. Use whitespace and a clear foreground/background hierarchy; keep labels away from image edges. Do not add decorative dashboards, badges, fake screenshots or tiny annotation walls.",
+      "These art-direction notes do not authorize new labels or new facts. Keep exact approved labels and the author's chosen layout; conflicting directions need review before generation."
+    ],
+    "roles": {
+      "cover": "Make the actual subject of the update immediately identifiable, with one strong silhouette and quiet space. Do not render a collage of all five article sections.",
+      "news_fact": "Isolate the verified change as one visible relationship between concrete objects. A comparison must preserve the same conditions; a decorative progress arrow is not evidence of improvement.",
+      "mechanism": "Reveal the minimum components needed to explain one mechanism. Each connection needs a specific meaning; do not turn association into causation or imply a product architecture that sources do not establish.",
+      "scenario": "Show a specific task, its input and the reviewable output in one coherent scene. Mark conceptual examples in the surrounding caption; avoid invented product interfaces or test results.",
+      "action_boundary": "Make one useful next action and its stopping boundary visible. Keep the reader's decision central; no engagement request, QR code, follower gate or exaggerated warning."
+    }
+  }
+}

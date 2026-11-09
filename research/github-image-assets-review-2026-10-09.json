@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-09T19:03:47+08:00",
+  "scope": "Image replacement quality and evidence safety for the existing five-platform graphic workflow",
+  "rubric": {
+    "task_fit": 30,
+    "evidence_safety": 25,
+    "integration_cost": 20,
+    "maintenance": 10,
+    "license": 10,
+    "resource_cost": 5
+  },
+  "method": "Subjective project-fit scoring based on pinned primary repository files and license text; not a measured quality uplift, popularity rank or claim that these are newly released.",
+  "candidates": [
+    {
+      "repo": "python-pillow/Pillow",
+      "branch": "main",
+      "license": "MIT-CMU",
+      "archived": false,
+      "sha": "9b6d21995d8c21f3f1180fe7018391aa9a5f3cf8",
+      "date": "2026-10-09T07:39:14Z",
+      "license_verified_from": "https://github.com/python-pillow/Pillow/blob/9b6d21995d8c21f3f1180fe7018391aa9a5f3cf8/LICENSE",
+      "license_blob_sha": "c011511a4ab6bd2bc901608e6b4c0fad95fc410f",
+      "source_path": "docs/reference/Image.rst",
+      "source_url": "https://github.com/python-pillow/Pillow/blob/9b6d21995d8c21f3f1180fe7018391aa9a5f3cf8/docs/reference/Image.rst",
+      "source_blob_sha": "86e2d03131b42529ae15b550eb3f2c9dbf753f76",
+      "scores": {
+        "task_fit": 26,
+        "evidence_safety": 25,
+        "integration_cost": 20,
+        "maintenance": 9,
+        "license": 10,
+        "resource_cost": 5
+      },
+      "total": 95,
+      "decision": "reuse_existing_runtime",
+      "applied": "Reuse installed Pillow to verify container and fully decode the same captured PNG bytes, inspect frames and compare exact RGBA pixels.",
+      "limits": "No upgrade to researched main commit; installed version is recorded separately. No OCR, aesthetics or semantic judgment."
+    },
+    {
+      "repo": "JimLiu/baoyu-skills",
+      "branch": "main",
+      "license": "MIT",
+      "archived": false,
+      "sha": "1567581c26ec29f4216c6e6835415bf30343b0e3",
+      "date": "2026-09-10T15:13:43Z",
+      "license_verified_from": "https://github.com/JimLiu/baoyu-skills/blob/1567581c26ec29f4216c6e6835415bf30343b0e3/LICENSE",
+      "license_blob_sha": "9f2cc0d74570c5841f02b639593d12a70dc7dc65",
+      "source_path": "skills/baoyu-article-illustrator/SKILL.md",
+      "source_url": "https://github.com/JimLiu/baoyu-skills/blob/1567581c26ec29f4216c6e6835415bf30343b0e3/skills/baoyu-article-illustrator/SKILL.md",
+      "source_blob_sha": "87e27e6d83f420605de2f6992454d71874d8dc44",
+      "scores": {
+        "task_fit": 29,
+        "evidence_safety": 22,
+        "integration_cost": 18,
+        "maintenance": 8,
+        "license": 10,
+        "resource_cost": 5
+      },
+      "total": 92,
+      "decision": "method_integrated",
+      "applied": "Make each source image map to an explicit five-role target; show author-provided section anchor, message and labels beside replacement diagnostics.",
+      "limits": "Existing fixed five-image policy and native image generation remain authoritative. Do not force numerical labels, arbitrary image counts, external backend installation or overwrite valid images."
+    },
+    {
+      "repo": "msitarzewski/agency-agents",
+      "branch": "main",
+      "license": "MIT",
+      "archived": false,
+      "sha": "f99f6aa910a442b0197b768ce0ea7751e35e2060",
+      "date": "2026-10-07T16:45:46Z",
+      "license_verified_from": "https://github.com/msitarzewski/agency-agents/blob/f99f6aa910a442b0197b768ce0ea7751e35e2060/LICENSE",
+      "license_blob_sha": "523078c01624b9b1b1c551e75054b9d3a9f953ab",
+      "source_path": "testing/testing-reality-checker.md",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/f99f6aa910a442b0197b768ce0ea7751e35e2060/testing/testing-reality-checker.md",
+      "source_blob_sha": "e534cfbd20d3115d5265387f19db7d3b25649421",
+      "scores": {
+        "task_fit": 24,
+        "evidence_safety": 23,
+        "integration_cost": 17,
+        "maintenance": 9,
+        "license": 10,
+        "resource_cost": 5
+      },
+      "total": 88,
+      "decision": "method_integrated",
+      "applied": "Keep actual visual review, factual verification and draft actions explicitly unperformed in a technical preflight; bind reports to inspected inputs.",
+      "limits": "Do not import unsupported benchmarks, automatic failing of every first implementation, Laravel-specific commands or personas as factual credentials."
+    },
+    {
+      "repo": "mapbox/pixelmatch",
+      "branch": "main",
+      "license": "ISC",
+      "archived": false,
+      "sha": "ab76f526ef951c0ec6284e314a700e161b1800e6",
+      "date": "2026-10-06T14:08:42Z",
+      "license_verified_from": "https://github.com/mapbox/pixelmatch/blob/ab76f526ef951c0ec6284e314a700e161b1800e6/LICENSE",
+      "license_blob_sha": "3194b3cb888599efb819d814c89e4642f70b70c1",
+      "source_path": "README.md",
+      "source_url": "https://github.com/mapbox/pixelmatch/blob/ab76f526ef951c0ec6284e314a700e161b1800e6/README.md",
+      "source_blob_sha": "274d367ea8f19a7f9bfea60f2bfb0ac18149859a",
+      "scores": {
+        "task_fit": 22,
+        "evidence_safety": 21,
+        "integration_cost": 14,
+        "maintenance": 9,
+        "license": 10,
+        "resource_cost": 4
+      },
+      "total": 80,
+      "decision": "defer_runtime",
+      "applied": "Evaluated fixed-size baseline/candidate/diff concept. Local implementation uses existing Pillow exact RGBA differences, not the pixelmatch algorithm.",
+      "limits": "No Node dependency added. No OKLab/HyAB, antialiasing suppression, perceptual threshold or traffic claim is implemented by our pixel count."
+    },
+    {
+      "repo": "JohannesBuchner/imagehash",
+      "branch": "master",
+      "license": "BSD-2-Clause",
+      "archived": false,
+      "sha": "be8a26d82c89a2b314823597e1efb9172c4f9326",
+      "date": "2026-10-05T08:29:59Z",
+      "license_verified_from": "https://github.com/JohannesBuchner/imagehash/blob/be8a26d82c89a2b314823597e1efb9172c4f9326/LICENSE",
+      "license_blob_sha": "bc9678155161ae6ac2b3522e5c48281e359d5dae",
+      "source_path": "README.rst",
+      "source_url": "https://github.com/JohannesBuchner/imagehash/blob/be8a26d82c89a2b314823597e1efb9172c4f9326/README.rst",
+      "source_blob_sha": "76c23a140e950ba41f8b3f6e8003651d4690483f",
+      "scores": {
+        "task_fit": 20,
+        "evidence_safety": 19,
+        "integration_cost": 14,
+        "maintenance": 9,
+        "license": 10,
+        "resource_cost": 4
+      },
+      "total": 76,
+      "decision": "defer_runtime",
+      "applied": "Distinguish encoded file identity from visual similarity. Keep exact decoded pixel deduplication and existing near-duplicate advisory.",
+      "limits": "Perceptual hashes are not exact equality or proof of differing information; package and scipy/numpy stack not added."
+    }
+  ],
+  "implementation": [
+    "scripts/image_asset_review.py",
+    "scripts/pack_asset_writer.py",
+    "tests/test_image_asset_review.py",
+    "docs/image-asset-review.md"
+  ],
+  "runtime_changes": "Reuse already-installed Pillow only; no new package, downloaded model, third-party Agent or Skill installation.",
+  "production_policy": "No draft actions, no production pack rewrites, no generated images or auto-filled visual reviews. Research scores are not publication approval."
+}

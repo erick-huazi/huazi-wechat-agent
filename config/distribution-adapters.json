@@ -1,0 +1,16 @@
+{
+  "schema_version": 2,
+  "verified_at": "2026-08-06",
+  "adapters": [
+    {
+      "id": "wechat-official",
+      "name": "微信官方草稿 API",
+      "source": "https://developers.weixin.qq.com/doc/offiaccount/Draft_Box/Add_draft.html",
+      "mode": "draft",
+      "platforms": [
+        "wechat"
+      ],
+      "policy": "enabled_after_preflight"
+    }
+  ]
+}

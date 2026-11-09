@@ -1,0 +1,33 @@
+{
+  "schema_version": 3,
+  "verified_at": "2026-08-06",
+  "platforms": [
+    {
+      "id": "wechat",
+      "name": "微信公众号",
+      "aliases": [
+        "公众号",
+        "微信",
+        "weixin"
+      ],
+      "content_files": [
+        "wechat-article.md"
+      ],
+      "cover": "images/{pack_date}-01.png",
+      "required_image_count": 5,
+      "require_dedicated_content": true,
+      "title_min_chars": 8,
+      "title_max_chars": 64,
+      "content_min_chars": 1000,
+      "delivery": "official_draft_api",
+      "public_api": "draft",
+      "runner": "wechat",
+      "requirements": [
+        "WECHAT_APP_ID",
+        "WECHAT_APP_SECRET"
+      ],
+      "docs": "https://developers.weixin.qq.com/doc/offiaccount/Draft_Box/Add_draft.html",
+      "notes": "公开草稿箱 API，当前主链路。"
+    }
+  ]
+}

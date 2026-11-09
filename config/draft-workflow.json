@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-wechat-only-temporary-v2",
+  "effective_from": "2026-10-04",
+  "scope_changed_on": "2026-10-19",
+  "previous_active_platforms": ["wechat", "toutiao", "zhihu", "xiaohongshu", "weibo"],
+  "active_platforms": ["wechat"],
+  "paused_platforms": ["toutiao", "zhihu", "xiaohongshu", "weibo"],
+  "resume_policy": "explicit_user_request_only_no_automatic_expiry",
+  "disabled_platforms": ["douyin-video", "douyin-image", "video-channel", "kuaishou-video", "kuaishou-image", "bilibili-column"],
+  "stage_platforms": [],
+  "mode": "draft_only",
+  "historical_plans": "preserve_and_validate_original_scope"
+}

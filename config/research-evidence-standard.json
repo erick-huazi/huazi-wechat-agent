@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-research-evidence-v1",
+  "effective_from": "2026-08-23",
+  "verification_mode": "separate_post_generation",
+  "maximum_age_hours": 24,
+  "minimum_claim_count": 2,
+  "minimum_load_bearing_claim_count": 1,
+  "minimum_source_domain_count": 2,
+  "minimum_primary_source_count": 1,
+  "minimum_claim_verification_schema": 3,
+  "minimum_claim_verification_schema_effective_from": "2026-09-06",
+  "numeric_claim_context_required_from_schema": 2,
+  "numeric_claim_evidence_required_from_schema": 3,
+  "source_snapshot_required_from": "2026-10-07",
+  "source_snapshot_maximum_age_hours": 72,
+  "required_article_files": [
+    "wechat-article.md",
+    "toutiao-article.md",
+    "zhihu-article.md",
+    "xiaohongshu.md",
+    "weibo-article.md",
+    "visual-video-pack.md"
+  ],
+  "allowed_source_kinds": [
+    "official",
+    "primary_research",
+    "regulatory",
+    "trusted_secondary",
+    "community"
+  ],
+  "primary_source_kinds": [
+    "official",
+    "primary_research",
+    "regulatory"
+  ],
+  "allowed_verdicts": [
+    "verified",
+    "corrected",
+    "contradicted",
+    "unverified"
+  ],
+  "allowed_importance": [
+    "load_bearing",
+    "supporting"
+  ]
+}

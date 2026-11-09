@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-22",
+  "score_meaning": "Editorial fit judgment, not measured traffic, model benchmarks or security certification",
+  "rubric": {"task_fit": 30, "usefulness": 25, "safety": 20, "license": 15, "integration_cost": 10},
+  "candidates": [
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "commit": "e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b",
+      "committed_at": "2026-10-19T21:29:53Z", "license": "MIT",
+      "inspected_files": [
+        {"path": "skills/ab-testing/SKILL.md", "blob_sha": "2549315f9c0afb5acce59adadf526737858c55ef"},
+        {"path": "skills/content-strategy/SKILL.md", "blob_sha": "772846f604505ccd8ad571cded9aa4391cdada65"}
+      ],
+      "score": {"task_fit": 29, "usefulness": 24, "safety": 18, "license": 15, "integration_cost": 9}, "total": 95,
+      "adopt": "Question-specific information gain, predeclared hypothesis, one metric, guardrails and inconclusive outcomes.",
+      "exclude": "Example uplift, generic sample targets, CTA funnel, runtime installation and claimed randomized WeChat testing.",
+      "reason": "Strong experiment planning; website-testing assumptions need observational adaptation."
+    },
+    {
+      "repository": "JimLiu/baoyu-skills", "url": "https://github.com/JimLiu/baoyu-skills",
+      "commit": "1567581c26ec29f4216c6e6835415bf30343b0e3",
+      "committed_at": "2026-09-10T15:13:43Z", "license": "MIT",
+      "inspected_files": [{"path": "skills/baoyu-article-illustrator/SKILL.md", "blob_sha": "87e27e6d83f420605de2f6992454d71874d8dc44"}],
+      "score": {"task_fit": 29, "usefulness": 23, "safety": 18, "license": 15, "integration_cost": 8}, "total": 93,
+      "adopt": "Explicit information role, layout/style/palette separation and saved full prompts; refine existing integration.",
+      "exclude": "Changing five-image count, mandatory numeric labels, new publishing plugin or image backend wrapper.",
+      "reason": "Direct illustration fit. Verified head is not a new model or news release."
+    },
+    {
+      "repository": "social-media-skills/skills", "url": "https://github.com/social-media-skills/skills",
+      "commit": "f28cef2b7067ec64e79c9d85421c022c06659e03",
+      "committed_at": "2026-10-15T14:55:19Z", "license": "MIT",
+      "inspected_files": [{"path": "skills/audience-research/SKILL.md", "blob_sha": "26e782d706ee59cfff37a371902928fdedcc46f0"}],
+      "score": {"task_fit": 28, "usefulness": 23, "safety": 17, "license": 15, "integration_cost": 8}, "total": 91,
+      "adopt": "Reader task and question before demographic personas; public evidence versus editorial hypotheses.",
+      "exclude": "Private messages, support-ticket collection, profiling, mass distribution and invented reader quotes.",
+      "reason": "Good problem discipline; broad social instructions need privacy and channel restrictions."
+    },
+    {
+      "repository": "antvis/Infographic", "url": "https://github.com/antvis/Infographic",
+      "commit": "5ae0d9394ac6280cb688eb4b4345881e291b9209",
+      "committed_at": "2026-10-20T05:24:12Z", "license": "MIT",
+      "inspected_files": [
+        {"path": "README.md", "blob_sha": "796b569b29cc4bea0c2473db8a966d345188f386"},
+        {"path": "skills/infographic-syntax-creator/SKILL.md", "blob_sha": "53b8ec47699dfc11cb994af3514bd353c7386e79"}
+      ],
+      "score": {"task_fit": 26, "usefulness": 22, "safety": 17, "license": 15, "integration_cost": 8}, "total": 88,
+      "adopt": "Relationship-oriented sequence, comparison, components and decision boundaries; sparse semantic icons.",
+      "exclude": "Inferring missing facts, renderer installation and SVG replacement for generated PNG delivery.",
+      "reason": "Strong structure vocabulary; production rendering deliberately outside integration."
+    },
+    {
+      "repository": "msitarzewski/agency-agents", "url": "https://github.com/msitarzewski/agency-agents",
+      "commit": "4e3ac3ca6604c75113f52c695dbddcc7af928b46",
+      "committed_at": "2026-10-19T16:47:34Z", "license": "MIT",
+      "inspected_files": [{"path": "design/design-visual-storyteller.md", "blob_sha": "e48fde299d7e7ecc259e05819be64212dcf2bc25"}],
+      "score": {"task_fit": 24, "usefulness": 20, "safety": 13, "license": 15, "integration_cost": 8}, "total": 80,
+      "adopt": "Visual pacing, consistent identity and progressive disclosure across five roles.",
+      "exclude": "Role-played experience, unsupported uplift targets, video creation and cross-platform deployment.",
+      "reason": "Useful art-direction checklist but role metric targets are not evidence."
+    }
+  ],
+  "verification": "Public GitHub metadata and commit-specific contents reads. Blob hashes identify inspected text; licenses reported by GitHub metadata. No upstream code executed.",
+  "local_implementation": {
+    "new_dependencies": [], "installed_upstream_agents": [],
+    "code": ["scripts/editorial_experiments.py", "scripts/content_visual_brief.py"],
+    "policy": "config/editorial-experiments.json",
+    "preserved": ["WeChat-only drafts", "ranking rubric and growth policy", "fact/image gates", "approval/readback", "historical packs"],
+    "not_claimed": ["live marketing test completed", "new images approved", "traffic uplift", "semantic truth from hashes"]
+  }
+}

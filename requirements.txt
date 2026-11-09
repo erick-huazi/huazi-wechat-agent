@@ -1,0 +1,6 @@
+Pillow>=10,<14
+markdown-it-py==3.0.0
+mdurl==0.1.2
+trafilatura==2.3.0
+python-docx>=1.1,<2
+pytest>=8,<10

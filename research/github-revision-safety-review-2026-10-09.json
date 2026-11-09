@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-09",
+  "round": "revision-safety",
+  "scope": "content and five-image storyboard revision, not publishing",
+  "rubric": {
+    "task_fit": 30,
+    "factual_safety": 25,
+    "local_integration": 20,
+    "maintenance": 10,
+    "license_clarity": 10,
+    "operating_cost": 5
+  },
+  "scoring_method": "本项目适配判断，分项相加。不是客观项目总榜、流量预测或模型性能基准。不使用 star 数制造热度。",
+  "candidates": [
+    {
+      "repository": "promptfoo/promptfoo",
+      "commit": "4a5e1e8f047fd005c624ddf3c366cde94607799c",
+      "commit_at": "2026-10-09T10:18:55Z",
+      "default_branch": "main",
+      "license": "MIT",
+      "archived": false,
+      "metadata_url": "https://api.github.com/repos/promptfoo/promptfoo",
+      "branch_url": "https://api.github.com/repos/promptfoo/promptfoo/branches/main",
+      "source": {
+        "url": "https://github.com/promptfoo/promptfoo/blob/4a5e1e8f047fd005c624ddf3c366cde94607799c/site/docs/configuration/expected-outputs/index.md",
+        "blob_sha": "322f203e7d27d4f9b9afc361c16563090fb16b64",
+        "scope": "Relevant documentation sections, not a full code or security audit"
+      },
+      "score": {
+        "task_fit": 28,
+        "factual_safety": 24,
+        "local_integration": 18,
+        "maintenance": 10,
+        "license_clarity": 10,
+        "operating_cost": 4
+      },
+      "total": 94,
+      "decision": "method_integrated",
+      "rationale": "确定性断言、输入绑定与改后重新评估最适合本项目；在既有 pytest 中实现，不引入模型裁判。",
+      "implemented": [
+        "固定错误变体回归",
+        "复核 ID 绑定真实输入与规则代码",
+        "变动后重新复核"
+      ],
+      "excluded": [
+        "额外运行时",
+        "自动模型评分",
+        "云端上传"
+      ]
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "9d630808e4add0a7146de4af9384155d5dee350a",
+      "commit_at": "2026-10-09T10:06:51Z",
+      "default_branch": "main",
+      "license": "Apache-2.0 (skills/skill-creator only)",
+      "archived": false,
+      "license_scope_url": "https://github.com/anthropics/skills/blob/9d630808e4add0a7146de4af9384155d5dee350a/skills/skill-creator/LICENSE.txt",
+      "metadata_url": "https://api.github.com/repos/anthropics/skills",
+      "branch_url": "https://api.github.com/repos/anthropics/skills/branches/main",
+      "source": {
+        "url": "https://github.com/anthropics/skills/blob/9d630808e4add0a7146de4af9384155d5dee350a/skills/skill-creator/SKILL.md",
+        "blob_sha": "65b3a402dbd09b8e83f9d637c6b553875189085c",
+        "scope": "Relevant documentation sections, not a full code or security audit"
+      },
+      "score": {
+        "task_fit": 27,
+        "factual_safety": 23,
+        "local_integration": 18,
+        "maintenance": 9,
+        "license_clarity": 10,
+        "operating_cost": 5
+      },
+      "total": 92,
+      "decision": "method_integrated",
+      "rationale": "只采用 skill-creator 的基线/候选对照、可核验断言与人工定性评审方法；许可证仅核验该子技能。",
+      "implemented": [
+        "改稿前后并列差异",
+        "条件和引用变化的人工复核",
+        "测试证据与内容质量判断分开"
+      ],
+      "excluded": [
+        "整套技能复制",
+        "上游子代理命令",
+        "虚构模型跑分"
+      ]
+    },
+    {
+      "repository": "langchain-ai/openevals",
+      "commit": "bf12ad47d8520fad85f820f4245bcb0b8c9c4954",
+      "commit_at": "2026-10-02T21:06:02Z",
+      "default_branch": "main",
+      "license": "MIT",
+      "archived": false,
+      "metadata_url": "https://api.github.com/repos/langchain-ai/openevals",
+      "branch_url": "https://api.github.com/repos/langchain-ai/openevals/branches/main",
+      "source": {
+        "url": "https://github.com/langchain-ai/openevals/blob/bf12ad47d8520fad85f820f4245bcb0b8c9c4954/README.md",
+        "blob_sha": "f619c1360bca1a791874fb06c17adf9d9dfc7850",
+        "scope": "Relevant documentation sections, not a full code or security audit"
+      },
+      "score": {
+        "task_fit": 24,
+        "factual_safety": 20,
+        "local_integration": 16,
+        "maintenance": 9,
+        "license_clarity": 10,
+        "operating_cost": 4
+      },
+      "total": 83,
+      "decision": "defer_runtime",
+      "rationale": "有结构化评估框架，但本轮最需要离线改稿差异；引入模型裁判不能解决新闻事实真伪。",
+      "implemented": [],
+      "excluded": [
+        "外部模型调用",
+        "自动语义通过分",
+        "新 API 凭据"
+      ]
+    },
+    {
+      "repository": "confident-ai/deepeval",
+      "commit": "0fb05d028b5ded9e4c466140ab3f3af90b801944",
+      "commit_at": "2026-10-07T18:21:15Z",
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "archived": false,
+      "metadata_url": "https://api.github.com/repos/confident-ai/deepeval",
+      "branch_url": "https://api.github.com/repos/confident-ai/deepeval/branches/main",
+      "source": {
+        "url": "https://github.com/confident-ai/deepeval/blob/0fb05d028b5ded9e4c466140ab3f3af90b801944/README.md",
+        "blob_sha": "8bc31142fbc2617a75d83e08fda9d3f3c2a1edac",
+        "scope": "Relevant documentation sections, not a full code or security audit"
+      },
+      "score": {
+        "task_fit": 25,
+        "factual_safety": 19,
+        "local_integration": 15,
+        "maintenance": 9,
+        "license_clarity": 10,
+        "operating_cost": 3
+      },
+      "total": 81,
+      "decision": "defer_runtime",
+      "rationale": "适合较大规模模型与代理评测；当前项目已有 pytest，不为这轮改稿保护再加模型和依赖。",
+      "implemented": [],
+      "excluded": [
+        "额外模型/运行时",
+        "未经执行的准确率声明"
+      ]
+    },
+    {
+      "repository": "BuilderIO/agent-native",
+      "commit": "64d18ee40bccd5a32d46c0e81fc522c592a403bd",
+      "commit_at": "2026-10-09T10:40:22Z",
+      "default_branch": "main",
+      "license": null,
+      "archived": false,
+      "metadata_url": "https://api.github.com/repos/BuilderIO/agent-native",
+      "branch_url": "https://api.github.com/repos/BuilderIO/agent-native/branches/main",
+      "source": {
+        "url": "https://github.com/BuilderIO/agent-native/blob/64d18ee40bccd5a32d46c0e81fc522c592a403bd/.agents/skills/writing-agent-instructions/SKILL.md",
+        "blob_sha": "a1f82bbab9968913bc05353a469f687c6fb0fb80",
+        "scope": "Relevant documentation sections, not a full code or security audit"
+      },
+      "score": {
+        "task_fit": 21,
+        "factual_safety": 20,
+        "local_integration": 12,
+        "maintenance": 8,
+        "license_clarity": 0,
+        "operating_cost": 5
+      },
+      "total": 66,
+      "decision": "not_selected_license_unverified",
+      "rationale": "指令分层和读回验证值得关注，但仓库许可证未确认且适用的是它自身应用运行环境，不直接搬入本项目。",
+      "implemented": [],
+      "excluded": [
+        "复制或安装该 Skill",
+        "将其上下文上限套用到 Codex",
+        "其应用专用动作"
+      ]
+    }
+  ],
+  "local_implementation": {
+    "new_dependencies": [],
+    "installed_upstream_agents": [],
+    "upstream_code_copied": false,
+    "files": [
+      "scripts/content_revision_review.py",
+      "scripts/pack_content_writer.py",
+      "tests/test_content_revision_review.py",
+      "docs/content-revision-review.md"
+    ],
+    "changes": [
+      "Read-only staged change review at existing writer entry point",
+      "Optional expected review ID stops stale-input writes",
+      "Preflight full staged batch before recovery point and overwrite",
+      "Write captured reviewed text, not a later unreviewed file read"
+    ],
+    "limitations": [
+      "No factual or semantic-equivalence judgement",
+      "No image pixel or aesthetic review",
+      "Existing unguarded callers retain their mode; review ID guard is opt-in",
+      "Per-file atomic replacement is not a multi-file transaction"
+    ],
+    "validation_report": "research/content-revision-validation-2026-10-09.json"
+  }
+}

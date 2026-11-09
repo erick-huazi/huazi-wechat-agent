@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-content-visual-v1",
+  "effective_from": "2026-10-05",
+  "roles": ["cover", "news_fact", "mechanism", "scenario", "action_boundary"],
+  "review_dimensions": {
+    "relevance": 25,
+    "legibility": 25,
+    "character_consistency": 20,
+    "composition": 15,
+    "distinct_information": 15
+  },
+  "minimum_dimension_score": 4,
+  "minimum_visual_score": 85,
+  "minimum_image_stddev": 2.0,
+  "near_duplicate_mean_error": 6.0,
+  "long_article_files": {
+    "wechat": "wechat-article.md",
+    "toutiao": "toutiao-article.md",
+    "zhihu": "zhihu-article.md",
+    "weibo": "weibo-article.md"
+  }
+}

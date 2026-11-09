@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "policy_id": "huazi-no-engagement-exchange-v1",
+  "effective_from": "2026-08-01",
+  "default_mode": "block",
+  "scope": [
+    "wechat",
+    "toutiao",
+    "zhihu",
+    "xiaohongshu",
+    "weibo",
+    "douyin-video",
+    "video-channel",
+    "kuaishou-video",
+    "douyin-image",
+    "kuaishou-image"
+  ],
+  "principles": [
+    "内容必须在正文内完成交付，不以关注、点赞、评论、收藏或转发换取资料。",
+    "不要求用户输入关键词、口令、数字或行业名来换取模板、清单或资源。",
+    "不使用互赞、互关、回关、求赞、求关注、一键三连或涨粉话术。",
+    "不把联系方式、群、二维码、站外账号或私信作为内容承接路径。",
+    "结尾只给可立即执行的自包含行动，不向用户索取互动。"
+  ],
+  "rules": [
+    {
+      "id": "engagement.keyword_exchange",
+      "category": "诱导互动",
+      "severity": "block",
+      "pattern": "(?:留言|评论(?:区|里)?|回复|私信|后台回复).{0,18}(?:关键词|口令|暗号|领取|获取|发你|送你|解锁|下载|清单|模板|资料|资源|福利)",
+      "message": "以评论、留言、回复或私信换取资料，属于交换式互动。",
+      "suggestion": "把清单或模板直接写进正文，删除互动条件。"
+    },
+    {
+      "id": "engagement.request_then_interact",
+      "category": "诱导互动",
+      "severity": "block",
+      "pattern": "(?:需要|想要|要一份|想看|想拿).{0,24}(?:留言|评论|回复|私信|后台)",
+      "message": "用用户需求引导评论、留言或私信。",
+      "suggestion": "直接提供方法，结尾改为一条无需互动的行动建议。"
+    },
+    {
+      "id": "engagement.action_for_reward",
+      "category": "诱导互动",
+      "severity": "block",
+      "pattern": "(?:点赞|关注|收藏|评论|转发|投币).{0,20}(?:后|即可|就能|领取|获取|得到|获得|发你|送你|解锁|下载|资料|模板|清单|福利|资源)",
+      "message": "把互动动作与奖励或资料绑定。",
+      "suggestion": "取消交换条件，并把必要资料直接放在正文。"
+    },
+    {
+      "id": "engagement.mutual_or_growth",
+      "category": "虚假互动",
+      "severity": "block",
+      "pattern": "(?:互赞|互关|回关|求赞|求关注|求收藏|刷赞|刷粉|涨粉|一键三连|点赞走一波)",
+      "message": "包含互赞互关、求互动或涨粉表达。",
+      "suggestion": "删除与内容价值无关的互动要求。"
+    },
+    {
+      "id": "engagement.imperative",
+      "category": "诱导互动",
+      "severity": "block",
+      "pattern": "(?:(?:欢迎|请|记得|别忘了|麻烦|帮忙).{0,10}(?:点赞|关注|收藏|评论|转发|投币))|(?:(?:点赞|关注|收藏|评论|转发|投币)(?:一下|支持一下|走一波))",
+      "message": "包含直接索取点赞、关注、收藏、评论或转发的话术。",
+      "suggestion": "删除互动指令，保留独立成立的内容结论。"
+    },
+    {
+      "id": "engagement.comment_prompt",
+      "category": "诱导互动",
+      "severity": "block",
+      "pattern": "(?:评论区|评论里).{0,18}(?:打|扣|输入|发送|告诉|聊聊|说说|留下|写下)",
+      "message": "明确要求用户在评论区执行动作。",
+      "suggestion": "改为正文内的自检步骤，不要求评论。"
+    },
+    {
+      "id": "engagement.question_bait",
+      "category": "诱导互动",
+      "severity": "block",
+      "pattern": "(?:你怎么看|你会怎么做|你遇到过吗|欢迎讨论|评论区见|说说你的看法|留下你的答案)",
+      "message": "结尾以直接提问或讨论邀请索取互动。",
+      "suggestion": "用明确结论或一条可执行动作收尾。"
+    },
+    {
+      "id": "engagement.freebie",
+      "category": "福利诱导",
+      "severity": "block",
+      "pattern": "(?:免费|福利|赠送|送你|领取).{0,14}(?:资料|模板|清单|课程|资源|礼包|名额)",
+      "message": "使用免费福利或资料包刺激互动。",
+      "suggestion": "直接公开必要内容，不以福利包装互动。"
+    },
+    {
+      "id": "traffic.off_platform_contact",
+      "category": "站外导流",
+      "severity": "block",
+      "pattern": "(?:(?:加|添加|联系|搜索).{0,8}(?:微信|vx|v信|qq|群))|(?:(?:私信|后台).{0,14}(?:联系方式|二维码|群|微信|vx|qq))|(?:主页(?:有|看)|看置顶|链接在评论区)",
+      "message": "包含站外联系方式、群、主页或评论区链接导流。",
+      "suggestion": "删除站外承接，正文自包含交付。"
+    },
+    {
+      "id": "traffic.contact_identifier",
+      "category": "联系方式",
+      "severity": "block",
+      "pattern": "(?:微信|vx|v信|qq|手机|电话|邮箱|联系).{0,10}(?:(?:1[3-9]\\d{9})|(?:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,})|(?:[A-Za-z0-9_-]{6,}))",
+      "message": "正文疑似包含联系方式或站外账号。",
+      "suggestion": "移除联系方式；来源链接应放入事实核查文件而非导流文案。"
+    },
+    {
+      "id": "engagement.repetitive_qna",
+      "category": "无意义互动",
+      "severity": "block",
+      "pattern": "(?:评论|留言).{0,12}(?:答题|答案|打卡|接龙|每天一问|统一回复)",
+      "message": "包含可能制造跟风互动的答题、打卡或接龙话术。",
+      "suggestion": "把答案和步骤直接写进正文。"
+    }
+  ]
+}
