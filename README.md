@@ -26,7 +26,7 @@ python -m pip install -r requirements.txt
 python -m pytest -q -p no:cacheprovider tests/test_topic_candidate_ranker.py tests/test_content_workflow_gate.py tests/test_wechat_draft_publisher.py tests/test_image_quality_gate.py
 ```
 
-脱敏副本在制作环境中，上述核心测试为 73 项通过、8 个子测试通过。完整历史测试套件有 46 项失败，涉及被排除的个人历史材料、历史平台及专题配置等；因此该副本尚未通过全量回归，不应视为开箱即用的完整部署。需先补充通用测试夹具、修复兼容性，再连接真实账号。
+脱敏副本在制作环境中，上述核心测试为 73 项通过、8 个子测试通过。完整测试为 758 项通过、40 项失败、1 项跳过、191 个子测试通过；失败包含草稿续跑、历史平台和专题配置等测试。因此该副本尚未通过全量回归，不应视为开箱即用的完整部署。需先补充通用测试夹具、修复兼容性，再连接真实账号。
 
 ## 工作流程
 
